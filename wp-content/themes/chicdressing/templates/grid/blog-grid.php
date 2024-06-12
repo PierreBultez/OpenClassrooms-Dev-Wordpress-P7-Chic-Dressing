@@ -32,7 +32,7 @@
 
 				<div class="post-media">
 					<a href="<?php echo esc_url( get_permalink() ); ?>"></a>
-					<?php the_post_thumbnail('full'); ?>
+					<?php the_post_thumbnail('large'); ?>
 				</div>
 
 				<header class="post-header">
@@ -144,7 +144,7 @@
 	endif; // have_posts()
 
 	echo '</ul>';
-	echo '<p class="text-center"><a class="chic-bouton" href="/blog">Voir tous les articles</a></p>';
+	echo '<p class="text-center"><a class="chic-bouton" href="/#blog">Voir tous les articles</a></p>';
 
 	?>
 

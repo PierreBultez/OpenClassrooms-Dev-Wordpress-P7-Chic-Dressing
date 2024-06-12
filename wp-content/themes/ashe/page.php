@@ -45,7 +45,7 @@ if ( is_front_page() ) {
 
 				if ( has_post_thumbnail() ) {
 					echo '<div class="post-media">';
-						the_post_thumbnail('ashe-full-thumbnail');
+						the_post_thumbnail('ashe-grid-thumbnail');
 					echo '</div>';
 				}
 
