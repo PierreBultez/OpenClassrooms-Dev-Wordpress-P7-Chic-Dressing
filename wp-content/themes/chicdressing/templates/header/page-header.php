@@ -36,7 +36,7 @@
 
 				<?php endif; ?>
 
-				<p class="site-description"><?php echo bloginfo( 'description' ); ?></p>
+				<p style="display: none;" class="site-description"><?php echo bloginfo( 'description' ); ?></p>
 
 			</div>
 		</div>
