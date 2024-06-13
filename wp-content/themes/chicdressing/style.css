@@ -105,7 +105,7 @@ Text Domain:	 chicdressing
     }
 
 body .page-content, .page-content select, .page-content input, .page-content textarea, .page-content .post-author a, .page-content .ashe-widget a, .page-content .comment-author {
-    color: #a5a5a5;
+    color: #242424;
     font-size: 12px;
     font-family: 'Open Sans';
 }
@@ -153,4 +153,8 @@ body .header-logo a{
 #chic-products ul.products li.product{
     background: #f6f6f6;
     padding-bottom: 20px;
+}
+
+.page-content .post-date, .page-content .post-comments, .page-content .post-author, .page-content [data-layout*=list] .post-author a, .page-content .related-post-date, .page-content .comment-meta a, .page-content .author-share a, .page-content .post-tags a, .page-content .tagcloud a, .widget_categories li, .widget_archive li, .ahse-subscribe-box p, .rpwwt-post-author, .rpwwt-post-categories, .rpwwt-post-date, .rpwwt-post-comments-number {
+    color: #282828 !important;
 }
