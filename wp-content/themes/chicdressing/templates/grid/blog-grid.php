@@ -8,10 +8,11 @@
 		get_template_part( 'templates/grid/category', 'description' );
 	}
 
-	// Blog Grid
-	echo '<ul class="blog-grid">';
 	// On ajoute un titre à la section blog
 	echo '<h2 id="leblog" class="chic-title">L\'actu des marques de luxe</h2>';
+
+	// Blog Grid
+	echo '<ul class="blog-grid">';
 
 	if ( have_posts() ) :
 
@@ -31,9 +32,16 @@
 			<article id="post-<?php the_ID(); ?>" <?php post_class($post_class); ?>>
 
 				<div class="post-media">
-					<a href="<?php echo esc_url( get_permalink() ); ?>"></a>
-					<?php the_post_thumbnail('large'); ?>
+					<a href="<?php echo esc_url( get_permalink() ); ?>" aria-label="Lire l'article: <?php echo esc_attr(get_the_title()); ?>"></a>
+					<?php 
+        if ( has_post_thumbnail() ) {
+            $image_alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true);
+            $image_alt = $image_alt ? $image_alt : "Image de l'article " . get_the_title(); // Fallback si aucun alt n'est fourni
+            the_post_thumbnail('large', ['alt' => $image_alt]);
+        }
+        ?>
 				</div>
+
 
 				<header class="post-header">
 
